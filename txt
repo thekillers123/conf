@@ -1,0 +1,7 @@
+#http-proxy-option CUSTOM-HEADER X-Online-Host era.fm
+#http-proxy 128.199.134.119 8080
+route-method exe
+push "dhcp-option-ipv6 DNS 2001:4860:4860:0:0:0:0:8888"
+push "ifconfig-ipv6 def1 bypass-dhcp"
+push "route-ipv6 def1 bypass-dhcp"
+push "redirect-gateway-ipv6 def1 bypass-dhcp"
